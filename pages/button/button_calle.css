@@ -1,0 +1,130 @@
+/* Farben */
+:root {
+    --primary: #3D5B81;
+    --secondary: #9BC0D9;
+    --accent: #EE6B4D;
+    --background: #DFFBFC;
+    --dark: #293241;
+}
+
+/* Allgemeines Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--dark);
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar-left {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar-right {
+    position: relative;
+}
+
+.burger-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: var(--primary);
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu li:hover {
+    background-color: var(--secondary);
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Demo-Bereich */
+#button-demo {
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+#button-name {
+    font-size: 24px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* Beschreibung */
+#description-section {
+    margin: 20px auto;
+    text-align: center;
+    max-width: 600px;
+}
+
+/* Code-Bereich */
+#code-section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.code-container {
+    position: relative;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.copy-btn:hover {
+    background-color: var(--accent);
+}
