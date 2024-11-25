@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Demo</title>
+    <!-- Seite-spezifische CSS -->
+    <link rel="stylesheet" href="button_calle.css">
+    <!-- Button-spezifische CSS -->
+    <link rel="stylesheet" href="button_calle_style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-left">CC0</div>
+        <div class="navbar-right">
+            <button class="burger-menu" onclick="toggleMenu()">☰</button>
+            <ul class="dropdown-menu" id="menu">
+                <li><a href="#">Start</a></li>
+                <li><a href="#">Styles</a></li>
+                <ul class="submenu">
+                    <li><a href="#">Button</a></li>
+                    <li><a href="#">Forms</a></li>
+                </ul>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Demo-Bereich für den Button -->
+    <section id="button-demo">
+        <h2 id="button-name">Orange Hover Button</h2>
+        <button class="demo-button">Klicke mich</button>
+    </section>
+
+    <!-- Bereich für Beschreibung -->
+    <section id="description-section">
+        <p>Dieser Button zeigt einen orangefarbenen Hover-Effekt, der ansprechendes Feedback gibt, wenn der Benutzer ihn anklickt.</p>
+    </section>
+
+    <!-- Bereich für den HTML-, CSS- und JS-Code -->
+    <section id="code-section">
+        <h2>HTML</h2>
+        <div class="code-container">
+            <pre>
+                <code id="html-code">
+&lt;button class="demo-button"&gt;Klicke mich&lt;/button&gt;
+                </code>
+            </pre>
+            <button class="copy-btn" onclick="copyToClipboard('html-code')">Copy Code</button>
+        </div>
+
+        <h2>CSS</h2>
+        <div class="code-container">
+            <pre>
+                <code id="css-code">
+.demo-button {
+    background-color: #EE6B4D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.demo-button:hover {
+    background-color: #9BC0D9;
+}
+                </code>
+            </pre>
+            <button class="copy-btn" onclick="copyToClipboard('css-code')">Copy Code</button>
+        </div>
+    </section>
+
+    <!-- JavaScript für Menü und Copy-Buttons -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+
+        function copyToClipboard(elementId) {
+            const code = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(code)
+                .then(() => alert('Code kopiert!'))
+                .catch(err => alert('Fehler beim Kopieren: ' + err));
+        }
+
+        document.querySelector('.demo-button').addEventListener('click', () => {
+            alert('Button wurde geklickt!');
+        });
+    </script>
+</body>
+</html>
